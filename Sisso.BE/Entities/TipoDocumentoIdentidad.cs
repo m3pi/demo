@@ -20,6 +20,7 @@ namespace Sisso.BE.Entities
         public string Nombre { get; set; }
         public string Codigo { get; set; }
 
-        public ICollection<Persona> Personas { get; set; } = new List<Persona>();
+        //[InverseProperty(nameof(Persona.TipoDocumentoIdentidad))]
+        //public ICollection<Persona> Personas { get; set; } = new List<Persona>();
     }
 }
