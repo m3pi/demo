@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Sisso.BE.Entities
 {
+    [Table("TipoDocumentoIdentidades")]
     public class TipoDocumentoIdentidad: BaseEntity
     {
         public TipoDocumentoIdentidad()
         {
-
+            TipoDocumentoIdentidadId = Guid.NewGuid();
         }
 
         [Key]

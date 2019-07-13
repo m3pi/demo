@@ -6,7 +6,7 @@ namespace Sisso.DAL
 {
     public static class ModelBuilderExtensions
     {
-        public static void Seet(this ModelBuilder modelBuilder)
+        public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Persona>().HasData(
                 new Persona { ApellidoMaterno = "Guarniz", ApellidoPaterno = "Saavedra", NroDoi = "47701560", PrimerNombre = "Oscar", SegundoNombre = "Geny" },

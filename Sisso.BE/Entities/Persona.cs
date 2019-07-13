@@ -23,8 +23,8 @@ namespace Sisso.BE.Entities
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
 
-        public Guid TipoDocumentoIdentidadId { get; set; }
-        [ForeignKey(nameof(TipoDocumentoIdentidadId))]
-        public TipoDocumentoIdentidad TipoDocumentoIdentidad { get; set; }
+        //public Guid TipoDocumentoIdentidadId { get; set; }
+        //[ForeignKey(nameof(TipoDocumentoIdentidadId))]
+        //public TipoDocumentoIdentidad TipoDocumentoIdentidad { get; set; }
     }
 }

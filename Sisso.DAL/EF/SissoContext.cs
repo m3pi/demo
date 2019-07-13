@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Sisso.DAL
 {
-    public class SissoContext: DbContext
+    public class SissoContext : DbContext
     {
         //Controlar las cadenas de conexión
         //public SissoContext(string connString) : base(connString)
@@ -20,7 +20,7 @@ namespace Sisso.DAL
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    @"data source=.;User ID=sa;Password=s1ss019*;Initial Catalog=Sisso;",
+                    @"data source=.;User ID=sa;Password=mompi3p;Initial Catalog=Sisso;",
                     options => options.ExecutionStrategy(c => new MyExecutionStrategy(c))
                     );
             }
@@ -49,7 +49,7 @@ namespace Sisso.DAL
              * Then you can call the Seed method in OnModelCreating:
              */
 
-            //modelBuilder.Seed();
+            modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
 

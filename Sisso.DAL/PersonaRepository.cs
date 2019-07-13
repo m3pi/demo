@@ -16,12 +16,12 @@ namespace Sisso.DAL
             dynamic info = new System.Dynamic.ExpandoObject();
             try
             {
-                var query = await Context.Personas.FirstOrDefaultAsync(x => x.Deleted == null);
-                var personas = new List<Persona>
-                {
-                    new Persona { ApellidoMaterno = "Guarniz", ApellidoPaterno = "Saavedra", NroDoi = "47701560", PrimerNombre = "Oscar", SegundoNombre = "Geny" },
-                    new Persona { ApellidoMaterno = "Urteaga", ApellidoPaterno = "Bazan", NroDoi = "87654321", PrimerNombre = "Anderson", SegundoNombre = "Kevin" }
-                };
+                var personas = await Context.Personas.Where(x => x.Deleted == null).ToListAsync();
+                //var personas = new List<Persona>
+                //{
+                //    new Persona { ApellidoMaterno = "Guarniz", ApellidoPaterno = "Saavedra", NroDoi = "47701560", PrimerNombre = "Oscar", SegundoNombre = "Geny" },
+                //    new Persona { ApellidoMaterno = "Urteaga", ApellidoPaterno = "Bazan", NroDoi = "87654321", PrimerNombre = "Anderson", SegundoNombre = "Kevin" }
+                //};
 
                 info.data = personas;
                 info.total = personas.Count();
